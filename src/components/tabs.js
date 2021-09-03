@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const Tabs = (topics) => {
   // TASK 3
   // ---------------------
@@ -12,31 +14,32 @@ const Tabs = (topics) => {
   //   <div class="tab">bootstrap</div>
   //   <div class="tab">technology</div>
   // </div>
-  //
+  
+
+
+// tried to use this method and then realized i need a loop to actually display everything, keeping this for notes though :)!
 
   // const mainDiv = document.createElement('div')
   // const firstTopic = document.createElement('div')
   // const secondTopic = document.createElement('div')
   // const thirdTopic = document.createElement('div')
-
   // mainDiv.appendChild(firstTopic);
   // mainDiv.appendChild(secondTopic);
   // mainDiv.appendChild(thirdTopic);
-
   // firstTopic.classList.add('tab')
   // secondTopic.classList.add('tab')
   // thirdTopic.classList.add('tab')
-
   // firstTopic.textContent = topics[0];
   // secondTopic.textContent = topics[1];
   // thirdTopic.textContent = topics[2];
 
   // return mainDiv
+
   const divTopics = document.createElement('div')
   topics.forEach(item => {
     const divItem = document.createElement('div')
-    divItem.textContent = item
-    divItem.classList.add ('tab')
+    divItem.textContent = item;
+    divItem.classList.add('tab');
     divTopics.appendChild(divItem)
   })
 return divTopics
